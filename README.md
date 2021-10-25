@@ -31,16 +31,16 @@ multiqc -o multiqc fastqc
 ```
 Для скачивания файлов с сервера была использована программа WinSCP
 
-4) С помощью программ platanus_trim и platanus_internal_trim подрезаем чтения по качеству и удаляем праймеры:
+5) С помощью программ platanus_trim и platanus_internal_trim подрезаем чтения по качеству и удаляем праймеры:
 ```
 platanus_trim pe_R1.fastq pe_R2.fastq 
 platanus_internal_trim mp_R1.fastq mp_R2.fastq  
 ```
-5) Удаляем ненужные файлы
+6) Удаляем ненужные файлы
 ```
 ls -1 *.fastq | xargs -tI{} rm -r {}
 ```
-6) Оценка качества подрезанных чтений и получение по ним общей статистики с помощью программы fastQC и multiQC :
+7) Оценка качества подрезанных чтений и получение по ним общей статистики с помощью программы fastQC и multiQC :
 ```
 mkdir trimmed_fastq
 mv -v *trimmed trimmed_fastq/
@@ -69,36 +69,36 @@ multiqc -o trimmed_multiqc trimmed_fastqc
 ![image](https://user-images.githubusercontent.com/93148620/138774132-42f60f8c-f1a2-4ed8-82e8-dccdb8c1012a.png)
 
 
-7) С помощью программы “platanus assemble” собираем контиги из подрезанных чтений:
+8) С помощью программы “platanus assemble” собираем контиги из подрезанных чтений:
 ```
 time platanus assemble -o Poil -f trimmed_fastq/pe_R1.fastq.trimmed trimmed_fastq/pe_R2.fastq.trimmed 2> assemble.log
 ```
-8) Анализ полученных контигов (общее кол-во контигов, их общая длина, длина самого длинного контига, N50):
+9) Анализ полученных контигов (общее кол-во контигов, их общая длина, длина самого длинного контига, N50):
 
 ![image](https://user-images.githubusercontent.com/93148620/138774343-f1a3c07a-2610-4c7a-8b27-351b249ff28c.png)
 
-9) С помощью программы “ platanus scaffold” собрать скаффолды из контигов, а также из подрезанных чтений:
+10) С помощью программы “ platanus scaffold” собрать скаффолды из контигов, а также из подрезанных чтений:
 ```
 time platanus scaffold -o Poil -c Poil_contig.fa -IP1 trimmed_fastq/pe_R1.fastq.trimmed  trimmed_fastq/pe_R2.fastq.trimmed -OP2 trimmed_fastq/mp_R1.fastq.int_trimmed trimmed_fastq/mp_R2.fastq.int_trimmed 2> scaffold.log
 ```
-10) Анализ полученных скаффолдов и количество гэпов:
+11) Анализ полученных скаффолдов и количество гэпов:
 
 ![image](https://user-images.githubusercontent.com/93148620/138774373-d660a8b7-8788-44b4-85b1-bb8a509ac42e.png)
 ![image](https://user-images.githubusercontent.com/93148620/138774397-dc75598a-59b3-4801-bc34-4d446bcbb5fb.png)
 
 
-11) Создание файла с одним самым большим размером:
+12) Создание файла с одним самым большим размером:
 ```
 echo scaffold1_len3834575_cov231 > name_scaff.txt
 seqtk subseq Poil_scaffold.fa name_scaff.txt > BigScaff.fna
 rm -r name_scaff.txt
 ```
 
-11) С помощью программы “ platanus gap_close” уменьшаем кол-во гэпов с помощью подрезанных чтений:
+13) С помощью программы “ platanus gap_close” уменьшаем кол-во гэпов с помощью подрезанных чтений:
 ```
 time platanus gap_close -o Poil -c Poil_scaffold.fa -IP1 trimmed_fastq/pe_R1.fastq.trimmed  trimmed_fastq/pe_R2.fastq.trimmed -OP2 trimmed_fastq/mp_R1.fastq.int_trimmed trimmed_fastq/mp_R2.fastq.int_trimmed 2> gapclose.log
 ```
-12) Анализ полученных скаффолдов с уменьшением гэпов:
+14) Анализ полученных скаффолдов с уменьшением гэпов:
 
 jupyter_notebook
 
