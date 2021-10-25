@@ -58,7 +58,7 @@ multiqc -o trimmed_multiqc trimmed_fastqc
 ![alt](![image](https://user-images.githubusercontent.com/93148620/138771024-8aca81f5-4932-4a9e-b06c-2b3300e83a92.png)![image](https://user-images.githubusercontent.com/93148620/138771183-197016ad-7038-44c6-880c-3b84b23105d2.png))
 
 До:
-![alt](![image](https://user-images.githubusercontent.com/93148620/138771233-95b325cb-507a-4952-be6c-1a0fe3529569.png))
+![alt]([image](https://user-images.githubusercontent.com/93148620/138771233-95b325cb-507a-4952-be6c-1a0fe3529569.png))
 После:
 ![alt](![image](https://user-images.githubusercontent.com/93148620/138771358-8fc8e266-46b9-4457-aacb-249f337c0684.png))
 
@@ -68,7 +68,7 @@ multiqc -o trimmed_multiqc trimmed_fastqc
 ![alt](![image](https://user-images.githubusercontent.com/93148620/138772053-0f89e027-a2b7-47e5-b15f-71a89aba5cb2.png))
 
 
-7)С помощью программы “platanus assemble” собираем контиги из подрезанных чтений:
+7) С помощью программы “platanus assemble” собираем контиги из подрезанных чтений:
 ```
 time platanus assemble -o Poil -f trimmed_fastq/pe_R1.fastq.trimmed trimmed_fastq/pe_R2.fastq.trimmed 2> assemble.log
 ```
