@@ -53,7 +53,7 @@ mkdir trimmed_multiqc
 multiqc -o trimmed_multiqc trimmed_fastqc
 ```
 До:
-image="https://user-images.githubusercontent.com/93148620/138770934-30630aac-e679-4971-9b35-d6c3bcdbf3f9.png"
+![image](https://user-images.githubusercontent.com/93148620/138773765-e019c4e0-8983-4cc4-be49-fbb6798c4873.png)
 После:
 ![alt](![image](https://user-images.githubusercontent.com/93148620/138771024-8aca81f5-4932-4a9e-b06c-2b3300e83a92.png)![image](https://user-images.githubusercontent.com/93148620/138771183-197016ad-7038-44c6-880c-3b84b23105d2.png))
 
