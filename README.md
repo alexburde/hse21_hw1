@@ -53,19 +53,19 @@ mkdir trimmed_multiqc
 multiqc -o trimmed_multiqc trimmed_fastqc
 ```
 До:
-![image](https://user-images.githubusercontent.com/93148620/138773765-e019c4e0-8983-4cc4-be49-fbb6798c4873.png)
+image="https://user-images.githubusercontent.com/93148620/138770934-30630aac-e679-4971-9b35-d6c3bcdbf3f9.png"
 После:
-![alt](![image](https://user-images.githubusercontent.com/93148620/138771024-8aca81f5-4932-4a9e-b06c-2b3300e83a92.png)![image](https://user-images.githubusercontent.com/93148620/138771183-197016ad-7038-44c6-880c-3b84b23105d2.png))
+![image](https://user-images.githubusercontent.com/93148620/138773889-c2424f13-6901-4cc6-9918-9909fddec3b5.png)
 
 До:
-![alt]([image](https://user-images.githubusercontent.com/93148620/138771233-95b325cb-507a-4952-be6c-1a0fe3529569.png))
+![image](https://user-images.githubusercontent.com/93148620/138773978-bb020ffb-2f95-45f8-b16e-10ad1ba558e3.png)
 После:
-![alt](![image](https://user-images.githubusercontent.com/93148620/138771358-8fc8e266-46b9-4457-aacb-249f337c0684.png))
+![image](https://user-images.githubusercontent.com/93148620/138774033-531dc199-2055-444a-b5ef-fb8550108383.png)
 
 До:
-![alt](![image](https://user-images.githubusercontent.com/93148620/138771443-f7cce033-26df-4eab-b47b-e816e3bf5878.png))
+![image](https://user-images.githubusercontent.com/93148620/138774084-269a2444-7d06-4412-b063-e7a61d1196fa.png)
 После:
-![alt](![image](https://user-images.githubusercontent.com/93148620/138772053-0f89e027-a2b7-47e5-b15f-71a89aba5cb2.png))
+![image](https://user-images.githubusercontent.com/93148620/138774132-42f60f8c-f1a2-4ed8-82e8-dccdb8c1012a.png)
 
 
 7) С помощью программы “platanus assemble” собираем контиги из подрезанных чтений:
