@@ -15,6 +15,7 @@ seqtk sample -s419 oilMP_S4_L001_R1_001.fastq 1500000 > mp_R1.fastq
 seqtk sample -s419 oilMP_S4_L001_R2_001.fastq 1500000 > mp_R2.fastq
 ```
 3) Удаление ненужных файлов:
+```
 rm -r oil_R1.fastq
 rm -r oil_R2.fastq
 rm -r oilMP_S4_L001_R1_001.fastq
