@@ -103,3 +103,6 @@ echo scaffold1_cov231 > name_scaff.txt
 seqtk subseq Poil_gapClosed.fa name_scaff.txt > longest.fna
 rm -r name_scaff.txt
 ```
+15) longest.fna у меня весит 0 КВ, поэтому я не могу его прикрепить в репозиторий
+![image](https://user-images.githubusercontent.com/93148620/139132908-7898ccbc-7786-4b30-9f30-722c2689aaaa.png)
+
