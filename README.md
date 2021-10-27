@@ -98,11 +98,7 @@ rm -r name_scaff.txt
 ```
 time platanus gap_close -o Poil -c Poil_scaffold.fa -IP1 trimmed_fastq/pe_R1.fastq.trimmed  trimmed_fastq/pe_R2.fastq.trimmed -OP2 trimmed_fastq/mp_R1.fastq.int_trimmed trimmed_fastq/mp_R2.fastq.int_trimmed 2> gapclose.log
 ```
-14) Анализ полученных скаффолдов с уменьшением гэпов:
-
-jupyter_notebook
-
-Снова достаем самый длинный скаффолд:
+14) Снова достаем самый длинный скаффолд:
 ```
 echo scaffold1_cov231 > name_scaff.txt
 seqtk subseq Poil_gapClosed.fa name_scaff.txt > longest.fna
