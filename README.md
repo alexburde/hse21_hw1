@@ -88,7 +88,7 @@ time platanus scaffold -o Poil -c Poil_contig.fa -IP1 trimmed_fastq/pe_R1.fastq.
 
 12) Создание файла с самым длинным скаффолдом:
 ```
-echo scaffold1_len3834575_cov231 > name_scaff.txt
+echo scaffold1_len3838202_cov231 > name_scaff.txt
 seqtk subseq Poil_scaffold.fa name_scaff.txt > BigScaff.fna
 rm -r name_scaff.txt
 ```
