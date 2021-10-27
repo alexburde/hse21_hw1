@@ -108,7 +108,9 @@ echo scaffold1_cov231 > name_scaff.txt
 seqtk subseq Poil_gapClosed.fa name_scaff.txt > longest.fna
 rm -r name_scaff.txt
 ```
-longest.fna 0 KB :( 
-поэтому я его не скачала в репозиторий, но он есть!!!
+15) Анализ самого длинного скаффолда:
+longest.fna весит 0 KB :( 
+поэтому я не могу дать точное количество гэпов и их общую длину
+ (по той же причине я его не скачала в репозиторий, но он есть!!!)
 ![image](https://user-images.githubusercontent.com/93148620/138778322-2cde1a3e-3dc7-4925-9b83-d43e148ad045.png)
 
