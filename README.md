@@ -75,16 +75,15 @@ time platanus assemble -o Poil -f trimmed_fastq/pe_R1.fastq.trimmed trimmed_fast
 ```
 9) Анализ полученных контигов (общее кол-во контигов, их общая длина, длина самого длинного контига, N50):
 
-![image](https://user-images.githubusercontent.com/93148620/138774343-f1a3c07a-2610-4c7a-8b27-351b249ff28c.png)
+![image](https://user-images.githubusercontent.com/93148620/139102723-265d33ae-c9c5-4020-bfe2-c5b4a4d8adc2.png)
 
 10) С помощью программы “ platanus scaffold” собрать скаффолды из контигов, а также из подрезанных чтений:
 ```
 time platanus scaffold -o Poil -c Poil_contig.fa -IP1 trimmed_fastq/pe_R1.fastq.trimmed  trimmed_fastq/pe_R2.fastq.trimmed -OP2 trimmed_fastq/mp_R1.fastq.int_trimmed trimmed_fastq/mp_R2.fastq.int_trimmed 2> scaffold.log
 ```
 11) Анализ полученных скаффолдов и количество гэпов:
-
-![image](https://user-images.githubusercontent.com/93148620/138774373-d660a8b7-8788-44b4-85b1-bb8a509ac42e.png)
-![image](https://user-images.githubusercontent.com/93148620/138774397-dc75598a-59b3-4801-bc34-4d446bcbb5fb.png)
+![image](https://user-images.githubusercontent.com/93148620/139102877-2baa77ea-612a-40bf-9f9b-b00e2e74708a.png)
+![image](https://user-images.githubusercontent.com/93148620/139102971-2e600d26-0040-4813-9b6f-2fe3834ada84.png)
 
 
 12) Создание файла с самым длинным скаффолдом:
