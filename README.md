@@ -87,7 +87,7 @@ time platanus scaffold -o Poil -c Poil_contig.fa -IP1 trimmed_fastq/pe_R1.fastq.
 ![image](https://user-images.githubusercontent.com/93148620/138774397-dc75598a-59b3-4801-bc34-4d446bcbb5fb.png)
 
 
-12) Создание файла с одним самым большим размером:
+12) Создание файла с самым длинным скаффолдом:
 ```
 echo scaffold1_len3834575_cov231 > name_scaff.txt
 seqtk subseq Poil_scaffold.fa name_scaff.txt > BigScaff.fna
@@ -102,7 +102,7 @@ time platanus gap_close -o Poil -c Poil_scaffold.fa -IP1 trimmed_fastq/pe_R1.fas
 
 jupyter_notebook
 
-Создаем файл с одним самым большим размером:
+Снова достаем самый длинный скаффолд:
 ```
 echo scaffold1_cov231 > name_scaff.txt
 seqtk subseq Poil_gapClosed.fa name_scaff.txt > longest.fna
